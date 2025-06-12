@@ -1,0 +1,58 @@
+import java.util.Scanner;
+
+Scanner <<whatever>> = new Scanner(System.in);
+ 
+int <<anything>> = <<whatever>>.nextInt();
+
+public boolean firstLast6(int[] nums)
+{
+  return (nums[nums.length-1] == 6)||((nums[0] == 6));
+}
+
+public boolean sameFirstLast(int[] nums) 
+{
+  return(nums.length>0)&&(nums[nums.length-1] == nums[0]);
+}
+
+public int[] makePi() 
+{
+  int[] pi = {3,1,4};
+  return pi;
+}
+
+public boolean commonEnd(int[] a, int[] b) 
+{
+  return(a[0]==b[0])||(a[a.length -1 ]==b[b.length - 1]);
+}
+
+public int sum3(int[] nums) 
+{
+  int c = 0;
+  for(int x : nums)
+    c+=x;
+  return c;
+}
+
+public static String convert(int n, int b)
+{
+   int q, r=n/b, n%b;
+   if(q==0) return ""+r;
+   return ""+convert(q, b);
+}
+
+public static int Ackerman(int m, int n)
+{
+   if(m==0) return n+1;
+   if(m>0&&n==0) return Ackerman(m-1,1);
+   return Ackerman(m-1,Ackerman(m,n-1));
+}
+
+import java.util.*;
+Public static void main(String[] args)
+{
+     Scanner s = new Scanner(System.in);
+     System.out.println(how many miles);
+     double m = s.NextDouble();
+     double k = m*1.6
+     System.out.println(That is + k + kilometers);
+}
