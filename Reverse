@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class Reverse 
+{
+	public static void main(String[] args)
+	{
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter a sting of text: ");
+		String text = s.next();
+		int i = 1;
+		while(i<=text.length())
+		{
+			System.out.println(text.charAt(text.length() - i));
+		}
+	}
+}
