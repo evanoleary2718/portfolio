@@ -1,0 +1,33 @@
+public class Flight implements Comparable
+{
+   private String source, destination, name, flightNum;
+   private GregorianCalendar departure, arrival;
+   public Flight()
+   {
+      Return flightNum;
+   }
+   public String getSource()
+   {
+      return source;
+   }
+   public String getDestination()
+   {
+      return destination;
+   }
+   public String toString()
+   {
+      return "Source: "+source
+          +"\nDestination: "+destination
+          +"\nName: "+name
+          +"\nFlight Number: "+flightNum
+          +"\nDeparture: "+departure.getDate()
+          +"\nArrival: "+arrival.getDate();
+   }
+   public int compareTo(Object o)
+   {
+      f=(Flight)o;    
+      if(source.equals(f.getSource())&&destination.equals(f.getDestination()))  
+         return 0;
+      return source.compareTo(f.getSource());
+   }
+}
