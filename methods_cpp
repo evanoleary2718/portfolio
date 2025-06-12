@@ -1,0 +1,46 @@
+int edge(TreeNode* n, bool l)
+{
+  int x=0;
+  if(n->left!=NULL) x=((n->key>edge(n->left, l))==l ? n->key : edge(n->left, l));
+  if(n->right!=NULL) x=((n->key>edge(n->right, l))==l ? n-> key :edge(n->right, l));
+  if(n->left==NULL&&n->right==NULL) return n->key;
+  return x;
+}
+
+bool isBST(TreeNode *node)
+{
+  bool b=1;
+  if(node->let!=NULL) b&=(edge(node->left, 1)<node->key&&isBST(node->left));
+  if(node->right!=NULL) b&=(node->right, 0)>node->key&&isBST(node->right));
+  return b;
+}
+
+void doubleTree(TreeNode *node)
+{
+  if(node->left!=NULL) doulbeTree(node->left);
+  if(node->right!=NULL) doubleTree(node->right);
+  bool b;
+  TreeNode* temp;
+  if(node->left!=NULL)
+  {
+    b=true;
+    temp=node->left;
+  }
+  TreeNode*copy=new TreeNode;
+  copy->key=node->key;
+  node->left=copy;
+  copy->right=NULL;
+  if(b) copy->left=temp;
+  else copy->left=NULL;
+}
+
+void HashTable::createNewHashTable()
+{
+  Movie * oldmov;
+  Movie * newmov;
+  int n;
+  for(int i=0; i<tableSize; i++)
+  {
+    oldmov=hashTable[i];
+    while(oldmov!=NULL)
+    
