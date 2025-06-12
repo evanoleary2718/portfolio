@@ -1,0 +1,13 @@
+public class Whatever
+{
+     public static void main(String[] args)
+     {
+          double miles = 5.75;
+          double km = 0;
+          double conv = 0;
+          System.out.println(miles + " miles");
+          System.out.println(km + " km");
+          km = 1.6*miles;
+          System.out.println(miles + " miles is " + km + " km.");
+     }
+}
