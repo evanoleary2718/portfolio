@@ -43,4 +43,35 @@ void HashTable::createNewHashTable()
   {
     oldmov=hashTable[i];
     while(oldmov!=NULL)
-    
+    {
+       newmov=new Movie(oldmov->title);
+       n=hashSum2(oldmov->title, tableSize);
+       if(newHashTable[n]==NULL) newHashTable[n]=newMov;
+       else
+       {
+          newMov->next=newHashTable[n];
+          newHashTable[n]=newmov;
+       }
+       oldmov=oldmov->next;
+    }
+  }
+}
+
+void deleteAndReplaceLeftMin(Treenode *root, int key)
+{
+  if(root->left!=NULL&&key<root->key) deleteAndReplaceLeftMin(root->left, key);
+  else if(root->right!=NULL&&key>root->key) deleteAndReplaceLeftMin(root->right, key);
+  else
+  {
+    root=root->right;
+    if(root->left==NULL) root->parent->right==NULL;
+    else
+    {
+      treeNode * node=root;
+      while(node->left!=NULL)
+      node=node->left;
+      root->key=node->key;
+      node->parent->left=NULL;
+    }
+  }
+}
