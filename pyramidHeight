@@ -1,0 +1,20 @@
+public static int pyramidHeight(int x)
+{
+		int sum=0, min=Integer.MAX_VALUE;
+		for(int c=0; c<x; c++)
+		{
+			for(int h=x; h>1; h--)
+			{
+				sum=0;
+				for(int n=1; n<=h; n++)
+				{
+					sum+=n*(n+c);
+				}
+				if(sum==x)
+				{
+					if(h<min)min=h;
+				}
+			}
+		}
+		return min;
+	}
