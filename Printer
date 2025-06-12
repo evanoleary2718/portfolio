@@ -1,0 +1,25 @@
+import cs1.Keyboard;
+class Printer
+{
+	public static void main(String[] args)
+	{
+		int height;
+		System.out.println("Enter Height in Feet: ");
+		height = Keyboard.readInt();
+		System.out.println("You are: " + height + " feet tall");
+		System.out.println("Enter Height in Inches: ");
+		height = Keyboard.readInt();
+		if(height > 75)
+		{
+			System.out.println("You are tall.");
+		}
+		if(height < 48)
+		{
+			System.out.println("You are small.");
+		{
+		if(height == 65)
+		{
+			System.out.println("Just right.");
+		}
+	}
+}
